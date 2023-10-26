@@ -9,6 +9,6 @@ searchBox.addEventListener('input', function() {
     if (searchText != "") {
         resultElement.innerHTML = "You typed: " + searchText;
     } else {
-        searchBox.style.display('none');
+        resultElement.textContent = "";
     }
   });
