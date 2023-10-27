@@ -31,15 +31,6 @@ nav img {
         -1px -1px 7px #292929;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0;
-}
 .grid-item {
     width: 100%;
     padding-top: 100%;
@@ -58,5 +49,30 @@ nav img {
         1px 1px 5px #111,
         -1px -1px 5px #292929;
     background-color: #101010;
+}
+
+
+@media only screen and (min-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 0;
+    }
 }
 
