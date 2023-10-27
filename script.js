@@ -16,12 +16,9 @@ searchBox.addEventListener('input', function() {
   const listings = document.getElementsByClassName('listings');
 
   function openEmailClient() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-
-    const subject = "Contact from your website";
-    const mailtoLink = `mailto:cigerettecorner@gmail.com?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+    const subject = "Customer Remarks";
+    const mailtoLink = `mailto:cigerettecorner@gmail.com?subject=${subject}`;
 
     window.location.href = mailtoLink;
 }
