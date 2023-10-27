@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>::Cigerette Corner::</title>
 </head>
 <body>
@@ -19,13 +19,42 @@
     <div id="result"></div>
 
     <div class="grid-container">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
+        <div class="grid-item">Marlboro Red</div>
+        <div class="grid-item">Marlboro Gold</div>
+        <div class="grid-item">Marlboro Advance</div>
+        <div class="grid-item">Dunhill</div>
+        <div class="grid-item">Dunhill Switch</div>
+        <div class="grid-item">B&H Alchemy</div>
+        <div class="grid-item">B&H Alchemy Double Switch</div>
+        <div class="grid-item">Winston</div>
     </div>
+
+    <h1>Contact Us</h1>
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <input type="button" value="Send" onclick="openEmailClient()">
+    </form>
+
+    <script>
+        function openEmailClient() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = "Opinions";
+            const mailtoLink = `mailto:cigerrettecorner@gmail.com?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
     
     <script src="script.js"></script>
 </body>
