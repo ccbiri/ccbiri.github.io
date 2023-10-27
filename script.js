@@ -21,7 +21,7 @@ searchBox.addEventListener('input', function() {
     const message = document.getElementById("message").value;
 
     const subject = "Contact from your website";
-    const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+    const mailtoLink = `mailto:cigerettecorner@gmail.com?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
 
     window.location.href = mailtoLink;
 }
