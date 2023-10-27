@@ -31,31 +31,11 @@
 
     <h1>Contact Us</h1>
     <form>
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
         <label for="message">Your Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea><br><br>
         
         <input type="button" value="Send" onclick="openEmailClient()">
     </form>
-
-    <script>
-        function openEmailClient() {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            const subject = "Opinions";
-            const mailtoLink = `mailto:cigerrettecorner@gmail.com?subject=${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-
-            window.location.href = mailtoLink;
-        }
-    </script>
-    
     <script src="script.js"></script>
 </body>
 </html>
